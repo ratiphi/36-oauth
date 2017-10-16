@@ -9,11 +9,11 @@
     <script>
       let link= document.createElement('a');
       let AUTH_URL= 'https://accounts.google.com/o/oauth2/v2/auth';
-      let clientIDQuery= 'client_id=318515739407-iiv5hqgse0f2cvfv32sf39r5qpdmu49i.apps.googleusercontent.com';
+      let clientIDQuery= 'client_id=350523018844-8uktnneff2cbhf2hbv388aj5svgndhe7.apps.googleusercontent.com';
       let repsonseTypeQuery= 'response_type=code';
       let scopeQuery= 'scope=openid%20profile%20email';
       let promptQuery= 'prompt=consent';
-      let redirectURIQuery= 'redirect_uri=http://localhost:8000/oauth/google/code';
+      let redirectURIQuery= 'redirect_uri=http://localhost:8080/oauth/google/code';
       let formattedURI= `${AUTH_URL}?${clientIDQuery}&${repsonseTypeQuery}&${scopeQuery}&${promptQuery}&${redirectURIQuery}`;
       link.setAttribute('href', formattedURI);
       link.textContent= 'login with google';
