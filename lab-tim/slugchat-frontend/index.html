@@ -5,19 +5,19 @@
     <title>Login with Google</title>
   </head>
   <body>
-    <h1>Login with Google demo</h1>
+    <h1>Google OAuth Login Demo Thing</h1>
     <script>
-      let link= document.createElement('a');
-      let AUTH_URL= 'https://accounts.google.com/o/oauth2/v2/auth';
-      let clientIDQuery= 'client_id=350523018844-8uktnneff2cbhf2hbv388aj5svgndhe7.apps.googleusercontent.com';
-      let repsonseTypeQuery= 'response_type=code';
-      let scopeQuery= 'scope=openid%20profile%20email';
-      let promptQuery= 'prompt=consent';
-      let redirectURIQuery= 'redirect_uri=http://localhost:8080/oauth/google/code';
-      let formattedURI= `${AUTH_URL}?${clientIDQuery}&${repsonseTypeQuery}&${scopeQuery}&${promptQuery}&${redirectURIQuery}`;
-      link.setAttribute('href', formattedURI);
-      link.textContent= 'login with google';
-      document.body.appendChild(link);
+      let a = document.createElement('a');
+      let authUrl= 'https://accounts.google.com/o/oauth2/v2/auth';
+      let clientId= 'client_id=350523018844-8uktnneff2cbhf2hbv388aj5svgndhe7.apps.googleusercontent.com';
+      let repsonseType= 'response_type=code';
+      let scope= 'scope=openid%20profile%20email';
+      let prompt= 'prompt=consent';
+      let redirectUri= 'redirect_uri=http://localhost:8080/oauth/google/code';
+      let fullUrl= `${authUrl}?${clientId}&${repsonseType}&${scope}&${prompt}&${redirectUri}`;
+      a.setAttribute('href', fullUrl);
+      a.textContent= 'Login with the Googles';
+      document.body.appendChild(a);
     </script>
   </body>
 </html>
